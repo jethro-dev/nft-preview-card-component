@@ -1,0 +1,141 @@
+:root {
+  --softblue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-bg-color: hsl(217, 54%, 11%);
+  --card-bg-color: hsl(216, 50%, 16%);
+  --line-color: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --paragraph-font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+.container {
+  background: var(--main-bg-color);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  width: 375px;
+  border-radius: 25px;
+  padding: 25px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.card-image-div {
+  cursor: pointer;
+  position: relative;
+}
+
+.card-image-hover {
+  position: absolute;
+  inset: 0 0 4px 0;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  border-radius: 25px;
+  transition: 300ms all ease-in-out;
+}
+
+.card-image-hover:hover {
+  opacity: 1;
+  background-color: hsl(178, 100%, 50%, 0.5);
+}
+
+.card-image-hover > img {
+  width: 50px;
+}
+
+.card-title {
+  margin: 15px 0;
+}
+
+.card-title span {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.5rem;
+
+  transition: 300ms ease-in-out all;
+  cursor: pointer;
+}
+
+.card-title span:hover {
+  color: var(--cyan);
+}
+
+.card p {
+  color: var(--softblue);
+  font-size: var(--paragraph-font-size);
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+.card-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line-color);
+}
+
+.card-detail .eth {
+  color: var(--cyan);
+  display: flex;
+  align-items: center;
+}
+
+.card-detail .day {
+  color: var(--softblue);
+  display: flex;
+  align-items: center;
+}
+
+.card-detail .eth img {
+  width: 13px;
+  margin-right: 5px;
+}
+
+.card-detail .day img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.card-footer {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.card-footer > img {
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.card-footer span {
+  color: var(--softblue);
+}
+
+.card-footer span span {
+  color: white;
+}
